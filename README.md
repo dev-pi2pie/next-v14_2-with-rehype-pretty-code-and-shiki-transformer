@@ -1,12 +1,12 @@
-# For reproducing the building issue
+# For reproducing the build issue
 
 After upgrade Next.js from ver 14.1.4 to ver 14.2.0
 
-The building issue happened, and after the fix version 14.2.1 coming. 
+The build issue happened, and after the fix version 14.2.1 coming. 
 
 The issue was still happened.
 
-The building issue message like this:
+The build issue message like this:
 
 ```
 pnpm build
