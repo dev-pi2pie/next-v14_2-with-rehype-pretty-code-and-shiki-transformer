@@ -1,4 +1,26 @@
+# Work on Next.js ver 14.1.4
+
+Made this branch `work-on-previous` for demonstrating the code is working well on this version.
+
+Like we're able to type that on the textarea (after we run the app)
+
+> `pnpm build` --> `pnpm start` 
+> @see `localhost:3000`
+
+~~~
+# hello
+
+```js
+console.log("hello") // [!code highlight]
+```
+~~~
+
+And we can see the line `console.log("hello")` got **highlight**.
+
+
 # For reproducing the building issue
+
+--> on the `main` branch
 
 After upgrade Next.js from ver 14.1.4 to ver 14.2.0
 
