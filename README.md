@@ -1,10 +1,10 @@
 # Work on Next.js ver 14.1.4
 
-Made this branch `work-on-previous` for demonstrating the code is working well on this version.
+Made this branch `work-on-the-previous` for demonstrating the code is working well on this version.
 
 Like we're able to type that on the textarea (after we run the app)
 
-> `pnpm build` --> `pnpm start` 
+> `pnpm build` --> `pnpm start` \ 
 > @see `localhost:3000`
 
 ~~~
