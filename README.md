@@ -4,7 +4,8 @@ Made this branch `work-on-the-previous` for demonstrating the code is working we
 
 Like we're able to type that on the textarea (after we run the app)
 
-> `pnpm build` --> `pnpm start` \ 
+> `pnpm build` --> `pnpm start`
+ 
 > @see `localhost:3000`
 
 ~~~
