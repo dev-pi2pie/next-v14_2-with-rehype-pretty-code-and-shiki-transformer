@@ -3,6 +3,9 @@ import React from "react";
 import { useEditorContext } from "./editorContext";
 import { mdsource } from "@/lib/mdsource";
 
+// because the mdsource function is async
+// import this component should use dynamic import
+
 export default function EditorResult() {
   const { editorValue } = useEditorContext();
   const [content, setContent] = React.useState(<></>);

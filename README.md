@@ -1,3 +1,38 @@
+# Solution
+
+After **Innei** pointed out [the solution](https://github.com/vercel/next.js/issues/64434#issuecomment-2064006059).
+
+Use `dynamic import` the component, and then the build will be success.
+
+Like this:
+
+```
+> ...
+> next build
+
+  ▲ Next.js 14.2.1
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (5/5)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    153 kB          244 kB
+└ ○ /_not-found                          879 B          91.3 kB
++ First Load JS shared by all            90.4 kB
+  ├ chunks/6a6d70e5-1e8784916154dc02.js  53.7 kB
+  ├ chunks/7001-94b5bd777fe69077.js      31.4 kB
+  └ other shared chunks (total)          5.37 kB
+
+
+○  (Static)  prerendered as static content
+```
+
+
 # For reproducing the build issue
 
 After upgrade Next.js from ver 14.1.4 to ver 14.2.0

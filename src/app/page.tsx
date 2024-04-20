@@ -1,8 +1,12 @@
 import { EditorProvider } from "@/components/editor/editorContext";
-import EditorResult from "@/components/editor/editorResult";
 import EditorTextArea from "@/components/editor/editorTextArea";
+import dynamic from "next/dynamic";
 
 export default function Home() {
+  const EditorResult = dynamic(
+    () => import("@/components/editor/editorResult"),
+    { ssr: false }
+  );
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <EditorProvider>
