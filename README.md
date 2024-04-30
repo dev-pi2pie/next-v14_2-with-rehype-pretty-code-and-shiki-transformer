@@ -1,9 +1,53 @@
-> **note**
->
-> branches:
-> 1. [main](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/main): the issue happened
-> 2. [work-on-the-previous](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/work-on-the-previous): In `v14.1.4`, the issue not happened
-> 3. [with-dynamic-import](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/with-dynamic-import): avoid the issue happened, and get the build success
+# Solution
+
+**arvinxx** introduced a new [solution](https://github.com/vercel/next.js/issues/64434#issuecomment-2082964050) to fix this issue.
+
+```diff
+// next.config.mjs
+const nextConfig = {
+  // ... other config
+
+  experimental: {
+    optimizePackageImports: [
+       // ... other packages
++      'shiki',
+    ],
+  }
+
+  // ...
+
+}
+```
+
+After use this new config, and then the build will be success.
+
+Like this:
+
+```
+> ...
+> next build
+
+  ▲ Next.js 14.2.1
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+ ✓ Linting and checking validity of types
+ ✓ Collecting page data
+ ✓ Generating static pages (5/5)
+ ✓ Collecting build traces
+ ✓ Finalizing page optimization
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    153 kB          243 kB
+└ ○ /_not-found                          879 B          91.4 kB
++ First Load JS shared by all            90.5 kB
+  ├ chunks/6a6d70e5-1e8784916154dc02.js  53.7 kB
+  ├ chunks/7001-94b5bd777fe69077.js      31.4 kB
+  └ other shared chunks (total)          5.46 kB
+
+
+○  (Static)  prerendered as static content
+```
 
 # For reproducing the build issue
 
