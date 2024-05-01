@@ -4,7 +4,6 @@
 > 1. [main](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/main): the issue happened
 > 2. [work-on-the-previous](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/work-on-the-previous): In `v14.1.4`, the issue not happened
 > 3. [with-dynamic-import](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/with-dynamic-import): avoid the issue happened, and get the build success
-
 > 4. [with-optimize-package-imports](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/with-optimize-package-imports): fix the issue with the new next config settings
 
 # For reproducing the build issue
