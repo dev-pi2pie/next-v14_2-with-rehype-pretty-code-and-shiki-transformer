@@ -1,4 +1,4 @@
-> **note**
+> [!NOTE]
 >
 > branches:
 > 1. [main](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/main): the issue happened
