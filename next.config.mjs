@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    optimizePackageImports: ["shiki"],
+    // optimizePackageImports: ["shiki"],
   },
+  transpilePackages: ["shiki"],
 };
 
 export default nextConfig;

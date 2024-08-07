@@ -1,6 +1,6 @@
 {
   "name": "next-v14_2-with-rehype-pretty-code-and-shiki-transform",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "private": true,
   "scripts": {
     "dev": "next dev",
