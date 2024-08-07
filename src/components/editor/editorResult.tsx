@@ -9,7 +9,7 @@ export default function EditorResult() {
 
   const asyncMdHandler = React.useCallback(async () => {
     const md = await mdsource(editorValue || "");
-    setContent(md as any);
+    setContent(md as unknown as JSX.Element);
   }, [editorValue]);
 
   React.useEffect(() => {
