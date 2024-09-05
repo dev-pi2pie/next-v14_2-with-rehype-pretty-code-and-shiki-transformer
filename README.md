@@ -1,12 +1,12 @@
 # Solution
 
-**mpereira** introduced a new [solution](https://github.com/vercel/next.js/issues/64434#issuecomment-2156715703) to fix this issue and with a special case. 
+Check out Next.js v14.2.8 
+> https://github.com/vercel/next.js/releases/tag/v14.2.8
 
-> And for reproducing this case, also add the new page `shiki` and a new navbar for switching the cases more convenient.
+The related discussion: 
+https://github.com/vercel/next.js/issues/64434
 
-In this case, adding `optimizePackageImports` will not fix the TypeError issue.
-
-However, the new solution is work, by adding `transpilePackages`.
+No need to set anything with `optimizePackageImports` or `transpilePackages` 
 
 See:
 
@@ -20,7 +20,7 @@ const nextConfig = {
 -      'shiki',
 -    ],
   },
-+  transpilePackages: ["shiki"],
+-  transpilePackages: ["shiki"],
   // ...
 
 }
@@ -34,7 +34,7 @@ Like this:
 > ...
 > next build
 
-  ▲ Next.js 14.2.1
+  ▲ Next.js 14.2.8
 
    Creating an optimized production build ...
  ✓ Compiled successfully
@@ -45,13 +45,13 @@ Like this:
  ✓ Finalizing page optimization
 
 Route (app)                              Size     First Load JS
-┌ ○ /                                    102 kB          245 kB
-├ ○ /_not-found                          879 B          91.5 kB
-└ ○ /shiki                               1.13 kB         144 kB
-+ First Load JS shared by all            90.6 kB
-  ├ chunks/6a6d70e5-d1c2588471071e4d.js  53.6 kB
-  ├ chunks/7001-8ec3a6ef4de962b0.js      31.5 kB
-  └ other shared chunks (total)          5.49 kB
+┌ ○ /                                    102 kB          244 kB
+├ ○ /_not-found                          877 B          91.6 kB
+└ ○ /shiki                               1.18 kB         144 kB
++ First Load JS shared by all            90.7 kB
+  ├ chunks/3471c0f1-e0a01212b37e4aa7.js  53.6 kB
+  ├ chunks/8006-f5f765bd384508bb.js      31.7 kB
+  └ other shared chunks (total)          5.37 kB
 
 
 ○  (Static)  prerendered as static content
