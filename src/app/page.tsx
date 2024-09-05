@@ -9,7 +9,7 @@ export default function Home() {
         <div className="lg:max-w-[1024px] mx-auto flex flex-col gap-5 mt-10 p-2">
           <h1>Editor</h1>
           <EditorTextArea className="text-black" />
-          <article className="prose dark:text-white dark:prose-headings:text-white">
+          <article className="prose">
             <EditorResult />
           </article>
         </div>
