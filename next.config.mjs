@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     // optimizePackageImports: ["shiki"],
   },
-  transpilePackages: ["shiki"],
+  // transpilePackages: ["shiki"],
 };
 
 export default nextConfig;
