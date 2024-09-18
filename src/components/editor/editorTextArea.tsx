@@ -1,13 +1,14 @@
 "use client";
 import React from "react";
-import { useEditorContext } from "./editorContext";
+import { useEditorContext, type EditorContextType } from "./editorContext";
 import { cn } from "@/lib/utils";
 import { Textarea } from "../ui/textarea";
 
 export default function EditorTextArea({
   className,
 }: Readonly<{ className?: string }>) {
-  const { editorValue, setEditorValue } = useEditorContext();
+  const { editorValue, setEditorValue } =
+    useEditorContext() as unknown as EditorContextType;
   const [text, setText] = React.useState<string>(editorValue);
   const defferedText = React.useDeferredValue(text);
 

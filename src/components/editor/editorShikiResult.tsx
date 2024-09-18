@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
-import { useEditorContext } from "./editorContext";
+import { useEditorContext, type EditorContextType } from "./editorContext";
 import { shikiToHtml } from "@/lib/shikiToHtml";
 
 export default function EditorShikiResult() {
-  const { editorValue } = useEditorContext();
+  const { editorValue } = useEditorContext() as unknown as EditorContextType;
   const [content, setContent] = React.useState(<></>);
+  const [isReady, setIsReady] = React.useState(false);
   const [lang, setLang] = React.useState("javascript");
   const [theme, setTheme] = React.useState("github-light");
 
@@ -17,6 +18,7 @@ export default function EditorShikiResult() {
     });
     try {
       setContent(html as unknown as JSX.Element);
+      setIsReady(true);
     } catch (e) {
       return "";
     }
@@ -24,6 +26,9 @@ export default function EditorShikiResult() {
   React.useEffect(() => {
     asyncShikiHandler();
   }, [asyncShikiHandler]);
+
+  if (!isReady) return null;
+
   return (
     <>
       <section>

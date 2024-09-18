@@ -1,3 +1,4 @@
+"use client";
 import { EditorProvider } from "@/components/editor/editorContext";
 import EditorShikiResult from "@/components/editor/editorShikiResult";
 import EditorTextArea from "@/components/editor/editorTextArea";
