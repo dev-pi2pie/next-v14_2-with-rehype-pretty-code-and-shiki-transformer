@@ -1,3 +1,11 @@
+> [!Info]
+> -- 📅 2024-09-18
+> This repo is related to one of NextJs issue: https://github.com/vercel/next.js/issues/64434
+> And this issue got resolved.
+> 
+> For now, archived this repo.
+
+
 > [!NOTE]
 >
 > branches:
@@ -25,7 +33,7 @@ However, the new version will cause that: \
 This is why stay at the version `v14.2.10`
 
 Need time to figure out what's going on here. \
-Haven't got the clues.
+Currently, I haven't got the clear clue of why this happened.
 
 And also, the security `Dependabot alerts`, so upgrade to the patched version `14.2.10`
 
