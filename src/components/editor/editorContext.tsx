@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 
-interface contextType {}
-
-export const editorContext = React.createContext<contextType | null>(null);
+export const editorContext = React.createContext<any>({});
 export const useEditorContext = () => React.useContext(editorContext);
 
 export type EditorContextType = {

@@ -1,13 +1,3 @@
-# Current state
-
-> [!Note]
-> Upgrade to v14.2.10 
-
-And found the old code would cause the confuse of where the code from.
-
-Therefore wrapping all Editor components into a component which from client, and then import it to the page.
-
-
 # Solution
 
 Check out Next.js v14.2.8 
