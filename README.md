@@ -22,6 +22,10 @@ However, the new version will cause that: \
 
 (when running the dev mode)
 
+This is why stay at the version `v14.2.10`
+
+And also, the security `Dependabot alerts`, so upgrade to the patched version `14.2.10`
+
 And upgrade to `v14.2.10`, should clarify the code is from client side or server side more clearly.
 
 Just took a note. 
