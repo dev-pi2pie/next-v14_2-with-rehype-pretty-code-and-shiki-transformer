@@ -32,10 +32,24 @@ However, the new version will cause that: \
 
 This is why stay at the version `v14.2.10`
 
-Need time to figure out what's going on here. \
-Currently, I haven't got the clear clue of why this happened.
+~~Need time to figure out what's going on here. \
+Currently, I haven't got the clear clue of why this happened.~~
+
+Okay, after took some time to take a look.
+
+The error happened due to `URL.canParse` ...
+
+And checked the support of this function: [URL: canParse() static method - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/URL/canParse_static)
+
+> Since December 2023, this feature works across the latest devices and browser versions. This feature might not work in older devices or browsers.
+
+And this issue has been mentioned on Next.js issues discussion:
+[Cannot build with URL.canParse function · Issue #65412 · vercel/next.js](https://github.com/vercel/next.js/issues/65412)
+
 
 And also, the security `Dependabot alerts`, so upgrade to the patched version `14.2.10`
+
+> The security report: [Next.js Cache Poisoning · CVE-2024-46982 · GitHub Advisory Database](https://github.com/advisories/GHSA-gp8f-8m3g-qvj9)
 
 And upgrade to `v14.2.10`, should clarify the code is from client side or server side more clearly.
 
