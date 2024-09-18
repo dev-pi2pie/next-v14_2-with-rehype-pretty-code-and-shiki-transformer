@@ -8,8 +8,25 @@
 > 5. [with-transpile-packages-and-code-to-html](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/with-transpile-packages-and-code-to-html): new case while interacting with `codeToHtml()`
 > 6. [upgrade-to-v14_2_8](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/upgrade-to-v14_2_8): No need to set anything with `optimizePackageImports` or `transpilePackages`
 
+# After v14.2.8 
 
-# For reproducing the build issue
+> [!Note] 
+> `v14.2.10`: [upgrade-to-v14_2_10](https://github.com/dev-pi2pie/next-v14_2-with-rehype-pretty-code-and-shiki-transformer/tree/upgrade-to-v14_2_10)
+> 
+> 📅 2024-09-18 
+
+From now, the latest v14 is `v14.2.12`
+
+However, the new version will cause that: \
+`Application error: a client-side exception has occurred (see the browser console for more information)` 
+
+(when running the dev mode)
+
+And upgrade to `v14.2.10`, should clarify the code is from client side or server side more clearly.
+
+Just took a note. 
+
+## For reproducing the build issue
 
 After upgrade Next.js from ver 14.1.4 to ver 14.2.0
 
