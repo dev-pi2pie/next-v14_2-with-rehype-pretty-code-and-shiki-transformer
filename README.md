@@ -1,5 +1,5 @@
-> [!Info]
-> -- 📅 2024-09-18
+> [!Note]
+> 📅 2024-09-18
 > This repo is related to one of NextJs issue: https://github.com/vercel/next.js/issues/64434
 > And this issue got resolved.
 > 
